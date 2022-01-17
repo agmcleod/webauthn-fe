@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/base64-arraybuffer": "^0.2.0",
     "@types/faker": "^5.5.9",
     "@types/styled-components": "^5.1.19",
     "faker": "^5.5.3",
