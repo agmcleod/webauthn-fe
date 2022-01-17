@@ -1,4 +1,4 @@
-import { encode, decode } from './base64'
+import { encode } from 'base64-arraybuffer'
 
 type PubKeyData =
   | Credential
