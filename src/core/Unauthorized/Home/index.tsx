@@ -51,7 +51,10 @@ export function Home() {
             name: values.email,
             displayName: values.email,
           },
-          pubKeyCredParams: [{ alg: -7, type: 'public-key' }],
+          pubKeyCredParams: [
+            { alg: -7, type: 'public-key' },
+            { alg: -257, type: 'public-key' },
+          ],
           authenticatorSelection: {
             authenticatorAttachment: 'platform',
           },

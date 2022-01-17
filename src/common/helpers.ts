@@ -1,4 +1,4 @@
-import * as base64ArrayBuffer from 'base64-arraybuffer'
+import { encode, decode } from './base64'
 
 type PubKeyData =
   | Credential
@@ -17,7 +17,7 @@ export function publicKeyCredentialToObject(
   }
 
   if (pubKeyCred instanceof ArrayBuffer) {
-    return base64ArrayBuffer.encode(pubKeyCred)
+    return encode(pubKeyCred)
   }
 
   if (pubKeyCred instanceof Object) {
