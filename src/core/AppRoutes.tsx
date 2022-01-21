@@ -1,15 +1,23 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import { Dashboard } from './Authorized/Dashboard'
 import { RequireAuth } from './RequireAuth'
-import { Home } from './Unauthorized/Home'
+import { Login } from './Unauthorized/Login'
 
 export function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/dashboard' element={<RequireAuth></RequireAuth>} />
-        <Route path='/' element={<Home />} />
+        <Route
+          path='/'
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </BrowserRouter>
   )

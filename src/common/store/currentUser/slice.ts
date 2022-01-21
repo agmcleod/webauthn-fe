@@ -4,6 +4,7 @@ import decode from 'jwt-decode'
 import { State } from '../root'
 
 export const ACCESS_TOKEN_KEY = 'accessToken'
+export type TokenData = { [key: string]: any }
 
 export const currentUser = createSlice({
   name: 'currentUser',
@@ -39,6 +40,6 @@ export const selectors = {
       return null
     }
 
-    return decode(token) as { [key: string]: any }
+    return decode(token) as TokenData
   }),
 }
